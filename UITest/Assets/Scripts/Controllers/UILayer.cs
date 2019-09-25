@@ -65,7 +65,7 @@ public abstract class UILayer<TScreen> : MonoBehaviour where TScreen : IUIScreen
             Debug.Log("Couldn't find a screen with this screen Id => " + screenID);
     }
 
-    public void HideAllScreens(bool animateWhenHiding = true)
+    public virtual void HideAllScreens(bool animateWhenHiding = true)
     {
         foreach (TScreen screen in registeredScreens.Values)
             screen.Hide(animateWhenHiding);
